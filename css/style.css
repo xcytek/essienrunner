@@ -1,0 +1,120 @@
+html { 
+    background: url(../img/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body{
+    text-align:center;
+}
+
+#title{
+    font-family: 'Special Elite', cursive;
+    width:100%;
+    padding:5px 0;
+    background:black;
+    text-align:center;
+    color:white;
+    font-size:30px;
+}
+
+#btn-play{
+    width: 100px;
+}
+
+
+
+/***************  GAME STYLES ******************** */
+#stage {
+    /*
+     *  Setting up a simple stage so we can see everything well 
+     */
+    background: url(https://dl.dropboxusercontent.com/u/57935247/bg-1600-800.jpg) repeat-x ;  
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    border:1px solid black;
+    height:400px;
+    width:100%;
+    /* 
+     * It will be important that we set this as relative, so we are able to position the characters absolutely 
+     * inside of it
+     */
+    position:relative;
+    z-index:0;
+    
+    margin:0 auto;
+}
+
+.character {
+    /*
+     * Very important that we set the height and width of our characters to the height and width of the sprites
+     */
+    height:50px;
+    width:40px;
+    /*
+     * We need to position them absolutely so we can have full control over their position within the stage
+     */
+    position:absolute;
+    left:50%;
+    top:333px;
+}
+
+#j {
+    /*
+     * And now we set the background image for the character div to be the first sprite (in the upper left corner)
+     */
+    background-image: url('https://dl.dropboxusercontent.com/u/57935247/javascript-spriting-j-sprite.png');
+    background-repeat:no-repeat;
+    background-position:0 0;
+}
+
+#bullet{
+    background-image: url(https://dl.dropboxusercontent.com/u/57935247/bullet.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    
+    height:65px;
+    width:100px;
+    position:absolute;
+    left:50px;
+    top:270px;
+    z-index:999;
+}
+
+.coin{
+    background-image: url(https://dl.dropboxusercontent.com/u/57935247/coin.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height:40px;
+    width:40px;
+    position:absolute;
+    left:50%;
+    top:150px;
+}
+
+#reset-character{
+    display: none;
+}
+
+#message{
+    display:none;
+    position:absolute;
+    left:50%;
+    top:30px;
+}
