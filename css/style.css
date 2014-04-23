@@ -108,6 +108,19 @@ body{
     top:150px;
 }
 
+.hadouken{
+    background-image: url(hadouken.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height:30px;
+    width:60px;
+    position:absolute;
+}
+
 #reset-character{
     display: none;
 }

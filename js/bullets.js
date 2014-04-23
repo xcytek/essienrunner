@@ -11,6 +11,7 @@ function launch_bullet(side){
         bullet_timer = setTimeout(function(){launch_bullet(side);}, bullet_speed);
         this_position = side;
         character_position_x = parseInt($('#j').attr('data-position-x'));
+        //$('#j').attr('data-position-x', this_position);
         if (character_alive) check_width_interval(this_position, character_position_x);
     }
     else{
@@ -26,6 +27,7 @@ function launch_bullet(side){
 
 function stop_bullet(){
 		clearTimeout(bullet_timer);
+		console.log('Bullet stoped');
 }
 
 

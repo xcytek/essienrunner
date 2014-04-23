@@ -67,6 +67,7 @@ function grab_coin(id){
         $('#message').html('<h1>You Win</h1>').fadeIn();
         stop_bullet();
         kill_character();
+        coins = [];
         $('#title').css('color', '#47a447');
     }
 }

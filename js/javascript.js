@@ -41,6 +41,7 @@
 		        console.log(moving_to);
 		    }*/
 		    
+		    $('#j').attr('data-moving-to', 'right');
 			left = left + 15; // Increase his left attribute by 10px
 			character_position_x = left;
 			document.getElementById('j').style.left = left+"px"; // and then we move him
@@ -111,6 +112,7 @@
 		 * Checking to make sure that if we move 15px more to the left, we won't be passed the left stage edge
 		 */
 		if ((left - 15) > 0){
+		    $('#j').attr('data-moving-to', 'left');
 			left = left - 15;
 			character_position_x = left;
 			document.getElementById('j').style.left = left+"px";
@@ -166,6 +168,7 @@
 			moving();
 		}
 		*/
+		$('#j').attr('data-moving-to', 'stop');
     	document.getElementById('j').style.backgroundPosition = "0px 0px";
     	moving();
     	clearTimeout(timer);
